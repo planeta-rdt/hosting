@@ -1,138 +1,207 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-		<meta charset="utf-8">
-    		<style>	
-			div {
-				color: rgb(0, 160, 227);
-				}
-			body {
-				background-color:black;
-				background-size: 100% 100%;
-				}
-			
-     			h3 {
-           			color: rgb(0,200,160);
-    			}
+<html>
 
-		    	h4 {
-                   		color: rgb(0,200,160);
-    			}
+<head>
+	<title>Planeta RDT</title>
+	<meta charset="utf-8">
 
-			#programacion {
-				color: rgb(0, 200, 160);
-			}
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
-			#diseño3d {
-				color: green;
-			}
+	<style>
 
-			#paracaidas {
-				color: violet;
-			}
+		div {
+			color: rgb(0, 160, 227);
+		}
 
-			#mision-secundaria {
-				color: orange;
-			}
+		body {
+			background-color: black;
+			background-size: 100% 100%;
+		}
 
-			#redes-sociales {
-				color: blue;
-			}
-			#paula {
-				color: red;
-			}
-			#samuel {
-				color: black;
-			
-			}
-			#instagram {
-				color: black;
-			}
-			#tiktok {
-				color: blue;
-			}
-			#twitter {
-				color: green;
-			}
-			#instituto {
-				color: orange;
-			}
-			#aficiones {
-				color: green;
-			}
-    		</style>
-    
-         	</head>
+		h3 {
+			color: rgb(0, 200, 160);
+		}
 
-         	<body>
+		h4 {
+			color: rgb(0, 200, 160);
+		}
+
+		#programacion {
+			color: rgb(0, 200, 160);
+		}
+
+		#diseño3d {
+			color: green;
+		}
+
+		#paracaidas {
+			color: violet;
+		}
+
+		#mision-secundaria {
+			color: orange;
+		}
+
+		#redes-sociales {
+			color: blue;
+		}
+
+		#paula {
+			color: red;
+		}
+
+		#samuel {
+			color: black;
+
+		}
+
+		#instagram {
+			color: black;
+		}
+
+		#tiktok {
+			color: blue;
+		}
+
+		#twitter {
+			color: green;
+		}
+
+		#instituto {
+			color: orange;
+		}
+
+		#aficiones {
+			color: green;
+		}
+
+		#mapid {
+			margin: auto;
+            height: 300px;
+			width: 600px;
+        }
+
+	</style>
+
+</head>
+
+<body>
 	<div>
-    			<h1 style="background-color:red;"> CanSat 2020/2021</h1>
-				<p>
-					<img alt="Foto grupal" src="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoportada.jpeg" width="500" align="absmiddle">
-				</p>
-    				
-    			<h2>Índice</h2>
-        			<ol>
-            				<li><a href="#presentacion" style="color:#fac807;"> Presentación de los integrantes del CanSat </a> </li>
-            				<li><a href="#colaboradores" style="color:#57554e;"> Colaboradores del CanSat </a> </li>
-            				<li><a href="#mentoras" style="color:#75fb04;"> Mentoras del proyecto </a> </Li>
-           			</ol>
-			<h3 id="aficiones"> <a href="https://planeta-rdt.github.io/subhosting/" style="color:#e77d06;"> <strong> Nuestras aficiones </strong> </a> </h3>
-  		 	<h3 id="presentacion"> <strong>¿Quiénes somos?</strong> </h3>
-    			<h4> Participantes: </h4>
-       				<ul> 
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_PAULA.JPEG" style="color:#08f720;"> Paula Taibo Suárez </a> </li>
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_ALEX.JPEG" style="color:#fb0a34;"> Alex Mosquera Gundín </a> </li>
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_ISMA.JPEG" style="color:#bd0edb;"> Ismael Sufian Benabdellah Baeza </a> </li>
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_XOEL.JPEG" style="color:#60416f;"> Xoel Noya Rodríguez </a> </li>
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_SAMUEL.JPEG" style="color:#0840ed;"> Samuel Varela Camba </a> </li>
-				</ul>
+		<h1 style="background-color:red;"> CanSat 2020/2021</h1>
+		<p>
+			<img alt="Foto grupal"
+				src="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoportada.jpeg"
+				width="500" align="absmiddle">
+		</p>
 
-    			<h4 id="colaboradores"> Colaboradores </h4>
-        			<ul> 
-            				<li> Gael Rodriguez Guerreiro </li>
-            				<li> Fran Rivas Jimenéz </li>
-            				<li> Lucía Pazos Moriche </li>
-            				<li> Alex Pedreira Rodiño </li>
-            				<li> Martin Bouzas Codesido </li>
-            				<li> Joel Maceiras Ortega </li>
-            				<li> Álvaro  López Fernández </li>
-        			</ul>
-        			<p> Contamos a parte con la colaboración de todos nuestros compañeros que nos siguen en redes sociales y nos echan una mano con las ideas. </p>
+		<h2>Índice</h2>
+		<ol>
+			<li><a href="#presentacion" style="color:#fac807;"> Presentación de los integrantes del CanSat </a> </li>
+			<li><a href="#colaboradores" style="color:#57554e;"> Colaboradores del CanSat </a> </li>
+			<li><a href="#mentoras" style="color:#75fb04;"> Mentoras del proyecto </a> </Li>
+		</ol>
+		<h3 id="aficiones"> <a href="https://planeta-rdt.github.io/subhosting/" style="color:#e77d06;"> <strong>
+					Nuestras aficiones </strong> </a> </h3>
+		<h3 id="presentacion"> <strong>¿Quiénes somos?</strong> </h3>
+		<h4> Participantes: </h4>
+		<ul>
+			<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_PAULA.JPEG"
+					style="color:#08f720;"> Paula Taibo Suárez </a> </li>
+			<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_ALEX.JPEG"
+					style="color:#fb0a34;"> Alex Mosquera Gundín </a> </li>
+			<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_ISMA.JPEG"
+					style="color:#bd0edb;"> Ismael Sufian Benabdellah Baeza </a> </li>
+			<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_XOEL.JPEG"
+					style="color:#60416f;"> Xoel Noya Rodríguez </a> </li>
+			<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_SAMUEL.JPEG"
+					style="color:#0840ed;"> Samuel Varela Camba </a> </li>
+		</ul>
 
-    			<h4 id="mentoras"> Mentoras: 
-        			<ul>
-					<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_BEA.JPEG" style="color:#bbf84a;"> Beatriz Méndez Mareque </a> </li>
-            				<li> María Victoria Fernández Rancaño </li>
-        			</ul>
-     			</h4>
-			<h3 id="diseño"> <a href="https://www.tinkercad.com/things/5qwnN9b8XZ8" style="color:#16f40e;"> Diseño del CanSat </a> </h3>
+		<h4 id="colaboradores"> Colaboradores </h4>
+		<ul>
+			<li> Gael Rodriguez Guerreiro </li>
+			<li> Fran Rivas Jimenéz </li>
+			<li> Lucía Pazos Moriche </li>
+			<li> Alex Pedreira Rodiño </li>
+			<li> Martin Bouzas Codesido </li>
+			<li> Joel Maceiras Ortega </li>
+			<li> Álvaro López Fernández </li>
+		</ul>
+		<p> Contamos a parte con la colaboración de todos nuestros compañeros que nos siguen en redes sociales y nos
+			echan una mano con las ideas. </p>
 
-			<h4 id="programacion">Programación</h4>
-			<p>Esta parte del trabajo, la progamación, es una parte fundamental del trabajo. Tiene un incoveniente de que nunca se acaba ya que siempre hay bugs, fallos, partes sin terminar... Se encargan:</p> 
-			<p id="paula"> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_PAULA.JPEG" style="color:#08f720;"> <strong>Paula  </strong> </a> </p>
-			<p id="samuel"> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_SAMUEL.JPEG" style="color:#0840ed;"> <strong>Samuel </strong> </a> </p>
-			<p>El trabajo de nuestros programadores es el de programar lo que va a ir en la lata, además de la realización de nuestra misión secundaria</p>
-			<h4 id="diseño3d">Diseño 3D</h4>
-			<p>Este grupo lo forman <strong>Alex y Xoel</strong>, y se encargan de crear un buen diseño de la lata, que pueda contener todos lo componentes, así como tener espacios para los interruptores o la antena.</p>
+		<h4 id="mentoras"> Mentoras:
+			<ul>
+				<li> <a href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_BEA.JPEG"
+						style="color:#bbf84a;"> Beatriz Méndez Mareque </a> </li>
+				<li> María Victoria Fernández Rancaño </li>
+			</ul>
+		</h4>
+		<h3 id="diseño"> <a href="https://www.tinkercad.com/things/5qwnN9b8XZ8" style="color:#16f40e;"> Diseño del
+				CanSat </a> </h3>
 
-<h4 id="paracaidas">Paracaídas</h4>
-<p>Los integrantes de esta parte del proyecto se encargan de la fabricación del paracaídas que llevará la lata a la hora de lanzarla y que llevará en la parte de arriba.<br>Del paracaídas se encarga mayoritariamente <strong>Ismael</strong>, pero <strong>Gael</strong> también ayudó aun sin ser del proyecto, siendo un mero colaborador.</p>
+		<h4 id="programacion">Programación</h4>
+		<p>Esta parte del trabajo, la progamación, es una parte fundamental del trabajo. Tiene un incoveniente de que
+			nunca se acaba ya que siempre hay bugs, fallos, partes sin terminar... Se encargan:</p>
+		<p id="paula"> <a
+				href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_PAULA.JPEG"
+				style="color:#08f720;"> <strong>Paula </strong> </a> </p>
+		<p id="samuel"> <a
+				href="https://raw.githubusercontent.com/planeta-rdt/hosting/main/Im%C3%A1genes/fotoindiv_SAMUEL.JPEG"
+				style="color:#0840ed;"> <strong>Samuel </strong> </a> </p>
+		<p>El trabajo de nuestros programadores es el de programar lo que va a ir en la lata, además de la realización
+			de nuestra misión secundaria</p>
+		<h4 id="diseño3d">Diseño 3D</h4>
+		<p>Este grupo lo forman <strong>Alex y Xoel</strong>, y se encargan de crear un buen diseño de la lata, que
+			pueda contener todos lo componentes, así como tener espacios para los interruptores o la antena.</p>
 
-<h4 id="mision-secundaria">Misión Secundaria</h4>
-<p>La misión secundaria que elegimos fué la de sacar fotos con una cámara integrada, para luego hacer un time-lapse con esas fotos y con el gps mostrar el recorrido.</p>
+		<h4 id="paracaidas">Paracaídas</h4>
+		<p>Los integrantes de esta parte del proyecto se encargan de la fabricación del paracaídas que llevará la lata a
+			la hora de lanzarla y que llevará en la parte de arriba.<br>Del paracaídas se encarga mayoritariamente
+			<strong>Ismael</strong>, pero <strong>Gael</strong> también ayudó aun sin ser del proyecto, siendo un mero
+			colaborador.</p>
 
-<h4 id="redes-sociales">Redes Sociales</h4>
-<p>En este apartado <strong>Fran y Lucía</strong>, dos de nuestros colaboradores, que nos han ayudado a llevar las redes sociales como Instagram, Twitter, Tik Tok o YouTube.</p>
-	<ul>
-		<li id="instagram"> <a href="https://www.instagram.com/planeta_rdt/" style="color:#09a25b;"> Instagram </a> </li>
-		<li id="tiktok"> <a href="https://www.tiktok.com/@rdt_planeta?lang=es" style="color:#d60ef4;"> TikTok </a> </li>
-		<li id="twitter"> <a href="https://twitter.com/PlanetaRdt" style="color:#f4ec0e;"> Twitter </a> </li>
-		<li id="instituto"> <a href="http://www.edu.xunta.gal/centros/iesregodetrabe/" style="color:#0ef4cd;"> Página del instituto </a> </li>
-		<li id="app"> <a href="https://github.com/planeta-rdt/APP_CanSat21/tree/main/app_cansat/APK" style="color:#d60ef4;"> APP_CanSat21 </a> </li>
-	</ul>
+		<h4 id="mision-secundaria">Misión Secundaria</h4>
+		<p>La misión secundaria que elegimos fué la de sacar fotos con una cámara integrada, para luego hacer un
+			time-lapse con esas fotos y con el gps mostrar el recorrido.</p>
+
+		<h4 id="redes-sociales">Redes Sociales</h4>
+		<p>En este apartado <strong>Fran y Lucía</strong>, dos de nuestros colaboradores, que nos han ayudado a llevar
+			las redes sociales como Instagram, Twitter, Tik Tok o YouTube.</p>
+		<ul>
+			<li id="instagram"> <a href="https://www.instagram.com/planeta_rdt/" style="color:#09a25b;"> Instagram </a>
+			</li>
+			<li id="tiktok"> <a href="https://www.tiktok.com/@rdt_planeta?lang=es" style="color:#d60ef4;"> TikTok </a>
+			</li>
+			<li id="twitter"> <a href="https://twitter.com/PlanetaRdt" style="color:#f4ec0e;"> Twitter </a> </li>
+			<li id="instituto"> <a href="http://www.edu.xunta.gal/centros/iesregodetrabe/" style="color:#0ef4cd;">
+					Página del instituto </a> </li>
+			<li id="app"> <a href="https://github.com/planeta-rdt/APP_CanSat21/tree/main/app_cansat/APK"
+					style="color:#d60ef4;"> APP_CanSat21 </a> </li>
+		</ul>
+
+		<div id="mapid"></div>
+
+		<script>
+			var mymap = L.map('mapid').setView([43.316375, -8.376943], 20);
+			L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1IjoicGxhbmV0YS1yZHQiLCJhIjoiY2tuNGp0ZzcwMXNkMzJ3cGtpOWN4Y2Q1eiJ9.KiAqLn812Qjep6bckndSwQ'
+	}).addTo(mymap);
+			var marker = L.marker([43.316375, -8.376943]).addTo(mymap);
+		</script>
 
 
-         	</body>
+</body>
 </div>
-	</html>
+
+</html>
