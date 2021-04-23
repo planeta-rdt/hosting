@@ -3,6 +3,7 @@
 #https://francescricart.com/estilizar-una-lista-usando-iconos/
 #https://fontawesome.com/ # página q te da los codigos
 #nuestro código, q hay q ponerlo en la cabecera <script src="https://kit.fontawesome.com/76dd83fa52.js" crossorigin="anonymous"></script> 
+#recordar que del siguiente código solo copiar el class, la i es del ejemplo.
 
 #tiktok  
 <i class="fab fa-tiktok"></i>
