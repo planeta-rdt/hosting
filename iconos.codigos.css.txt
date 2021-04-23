@@ -1,0 +1,18 @@
+#estos son los codigos de los iconos
+#Páginas de inforamción:
+#https://francescricart.com/estilizar-una-lista-usando-iconos/
+#https://fontawesome.com/ # página q te da los codigos
+#nuestro código, q hay q ponerlo en la cabecera <script src="https://kit.fontawesome.com/76dd83fa52.js" crossorigin="anonymous"></script> 
+
+#tiktok  
+<i class="fab fa-tiktok"></i>
+#instagram
+<i class="fab fa-instagram"></i>
+#twitter
+<i class="fab fa-twitter"></i>
+#apk_CanSat21_(icono_de_android)
+<i class="fab fa-android"></i>
+#qr_APK_CanSat21
+<i class="fas fa-qrcode"></i>
+#icono_paginadelinsti(icono de un blog)
+<i class="fas fa-blog"></i>
